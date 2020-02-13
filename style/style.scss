@@ -1,0 +1,308 @@
+@import "colors.scss";
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@mixin phone {
+    @media only screen and(max-width: 1280px){
+        @content;
+    }
+}
+
+@mixin table {
+    @media only screen and(max-width: 982px){
+        @content;
+    }
+}
+
+@mixin phone2 {
+    @media only screen and(max-width: 736px){
+        @content;
+    }
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    border: 0;
+}
+
+body {
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: "Poppins", sans-serif;
+    padding-top: 90px;
+
+    .special {
+        padding: 60px 30px;
+        text-align: center;
+
+        h2 {
+            font-size: 28px;
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 12px;
+
+            &::after {
+               content: "";
+               position: absolute;
+               margin: auto;
+               left: 0;
+               right: 0;
+               bottom: 0;
+               width: 10%;
+               height: 1px;
+               background-color: rgba(0, 0, 0, 0.125);
+            }
+        }
+
+        p {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #BBBBBB;
+            margin: 0;
+        }
+    }
+
+    img {
+        display: block;
+    }
+
+    #header {
+        text-align: center;
+        margin-bottom: 55px;
+        .logo {
+            a {
+                font-size: 64px;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+
+    #main {
+        .inner {
+            width: 1280px;
+            max-width: 90%;
+            margin: 0 auto;
+            border-radius: 4px;
+            box-shadow: 0px 0px 15px 0px black;
+            background: $white;
+            margin-bottom: 30px;
+
+            #one {
+                .top__image {
+                    img {
+                        width: 100%;
+                    }
+                }
+                
+
+                .content {
+                    padding: 95px;
+                    background: $white;
+                    p {
+                        line-height: 25px;
+                        color: $rgba1;
+
+                        &:nth-of-type(1){
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+
+            #two {
+                padding: 95px;
+                background: $myDarkColor;
+
+                .special {
+                    background: black;
+                    padding: 32px;
+
+                    h2 {
+                        color: $white;
+                        margin-bottom: 16px;
+                        &::after {
+                            background-color: rgba(255, 255, 255, 0.15);
+                        }
+                    }
+
+                    p {
+                        color: rgba(255, 255, 255, 0.25);
+                    }
+                }
+                
+                .content {
+                    .gallery {
+                        display: flex;
+                        flex-wrap: wrap;
+                        a {
+                            width: 50%;
+
+                            img {
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                    }
+                    @include table {
+                          .gallery {
+                              flex-direction: column;
+
+                              a{
+                                  width: 100%;
+                              }
+                          }  
+                    }
+                }
+            }
+
+            #three {
+                .spotLight {
+                    background: $white;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    &__image {
+                        width: 50%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    &__text {
+                        width: 50%;
+                        padding: 95px;
+
+                        h3 {
+                            font-weight: bold;
+                            line-height: 1.5;
+                            margin-bottom: 16px;
+                            font-size: 20px;
+                        }
+
+                        p {
+                            color: $rgba1;
+                            line-height: 23px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    @include phone {
+                        &__text {
+                            padding: 64px;
+                        }
+                    }
+
+                    @include phone2 {
+                        &__text {
+                            padding: 32px;
+                        }
+                    }
+
+                    
+                    
+                }
+                .alt {
+                    background: $myDarkColor;
+                    text-align: right;
+                    h3 {
+                        color: $white;
+                    }
+
+                    p {
+                        color: rgba(255, 255, 255, 0.25);
+                    }
+                }
+                
+                @include table {
+                    .spotLight {
+                        flex-direction: column;
+
+                        &__image {
+                            width: 100%;
+                        }
+
+                        &__text {
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                    .alt {
+
+                        .spotLight__text {
+                            order: 2;
+                        }
+                        
+                        .spotLight__image {
+                            order: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #footer {
+        padding: 30px 0;
+        .container {
+            display: flex;
+            justify-content: center;
+
+            .icons {
+                display: flex;
+
+                li {
+                    padding-right: 32px;
+                    a {
+                        color: rgba(255, 255, 255, 0.75);
+                        font-size: 30px;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        p {
+            color: rgba(255, 255, 255, 0.50);
+            font-size: 13px;
+            text-align: center;
+            margin-top: 30px;
+            margin-left: -25px;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px){
+    body {
+        #main {
+            .inner {
+                #one {
+                    .top__image {
+                        img {
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .content {
+                        padding: 0px 15px 95px 15px;;
+                    }
+                }
+                #two {
+                    padding: 95px 15px;
+                }
+            }
+        }
+    }
+}

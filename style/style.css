@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  background-image: url(../images/bg.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  padding-top: 90px;
+}
+
+body .special {
+  padding: 60px 30px;
+  text-align: center;
+}
+
+body .special h2 {
+  font-size: 28px;
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+body .special h2::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 10%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+body .special p {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #BBBBBB;
+  margin: 0;
+}
+
+body img {
+  display: block;
+}
+
+body #header {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+body #header .logo a {
+  font-size: 64px;
+  color: white;
+  font-weight: bold;
+}
+
+body #main .inner {
+  width: 1280px;
+  max-width: 90%;
+  margin: 0 auto;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 15px 0px black;
+          box-shadow: 0px 0px 15px 0px black;
+  background: white;
+  margin-bottom: 30px;
+}
+
+body #main .inner #one .top__image img {
+  width: 100%;
+}
+
+body #main .inner #one .content {
+  padding: 95px;
+  background: white;
+}
+
+body #main .inner #one .content p {
+  line-height: 25px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+body #main .inner #one .content p:nth-of-type(1) {
+  margin-bottom: 30px;
+}
+
+body #main .inner #two {
+  padding: 95px;
+  background: #1e1f23;
+}
+
+body #main .inner #two .special {
+  background: black;
+  padding: 32px;
+}
+
+body #main .inner #two .special h2 {
+  color: white;
+  margin-bottom: 16px;
+}
+
+body #main .inner #two .special h2::after {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+body #main .inner #two .special p {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+body #main .inner #two .content .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body #main .inner #two .content .gallery a {
+  width: 50%;
+}
+
+body #main .inner #two .content .gallery a img {
+  display: block;
+  width: 100%;
+}
+
+@media only screen and (max-width: 982px) {
+  body #main .inner #two .content .gallery {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #main .inner #two .content .gallery a {
+    width: 100%;
+  }
+}
+
+body #main .inner #three .spotLight {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body #main .inner #three .spotLight__image {
+  width: 50%;
+}
+
+body #main .inner #three .spotLight__image img {
+  width: 100%;
+}
+
+body #main .inner #three .spotLight__text {
+  width: 50%;
+  padding: 95px;
+}
+
+body #main .inner #three .spotLight__text h3 {
+  font-weight: bold;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+body #main .inner #three .spotLight__text p {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 23px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 1280px) {
+  body #main .inner #three .spotLight__text {
+    padding: 64px;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  body #main .inner #three .spotLight__text {
+    padding: 32px;
+  }
+}
+
+body #main .inner #three .alt {
+  background: #1e1f23;
+  text-align: right;
+}
+
+body #main .inner #three .alt h3 {
+  color: white;
+}
+
+body #main .inner #three .alt p {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+@media only screen and (max-width: 982px) {
+  body #main .inner #three .spotLight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body #main .inner #three .spotLight__image {
+    width: 100%;
+  }
+  body #main .inner #three .spotLight__text {
+    width: 100%;
+    text-align: center;
+  }
+  body #main .inner #three .alt .spotLight__text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  body #main .inner #three .alt .spotLight__image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+body #footer {
+  padding: 30px 0;
+}
+
+body #footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body #footer .container .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body #footer .container .icons li {
+  padding-right: 32px;
+}
+
+body #footer .container .icons li a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 30px;
+}
+
+body #footer .container .icons li a:hover {
+  color: white;
+}
+
+body #footer p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  text-align: center;
+  margin-top: 30px;
+  margin-left: -25px;
+}
+
+@media only screen and (max-width: 576px) {
+  body #main .inner #one .top__image img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body #main .inner #one .content {
+    padding: 0px 15px 95px 15px;
+  }
+  body #main .inner #two {
+    padding: 95px 15px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
